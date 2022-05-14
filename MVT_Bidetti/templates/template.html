@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Verdana;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informacion de familiares</h1>
+    <hr></hr>
+
+    {% if personas %}
+
+    {% for person in personas %}
+    <tr>
+        <ul>
+        <li><h4>Nombre = {{person.nombre}}</h4></li>
+        <li><h4>Edad = {{person.edad}}</h4></li>
+        <li><h4>Fecha de nacimiento = {{person.fecha_nacimiento}}</h4></li>
+        </ul>
+        <hr></hr>
+    </tr>
+    {% endfor %}
+
+    {% endif %}
+
+</body>
+</html>
